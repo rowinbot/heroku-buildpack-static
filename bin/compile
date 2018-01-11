@@ -18,7 +18,7 @@ unset GIT_DIR
 # Load some convenience functions like status(), echo(), and indent()
 source $bp_dir/bin/common.sh
 
-source "$build_dir/_static.cfg"
+source "$build_dir/.herokuconfig"
 
 if [ ! -e $build_dir/Procfile ]; then
   Generate_Procfile=true
@@ -31,10 +31,10 @@ mkdir -p $cache_dir/static
 
 if [[ ! -f $build_dir/error/404.html ]]; then
   if [[ -f $build_dir/404.htm ]]; then
-    status "Movinging /404.htm to /error/404.html... "
+    status "Moving /404.htm to /error/404.html... "
     mv "$build_dir/404.htm" "$build_dir/error/404.html"
   elif [[ -f $build_dir/404.html ]]; then
-    status "Movinging /404.htm to /error/404.html... "
+    status "Moving /404.htm to /error/404.html... "
     mv "$build_dir/404.html" "$build_dir/error/404.html"
   elif [[ -f $build_dir/error/404.htm ]]; then
     status "Renaming 404.htm to 404.html... "
