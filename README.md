@@ -9,7 +9,7 @@ Usage
 Example usage:
 
     $ ls -R *
-    _static.cfg                img.png                    text.txt
+    herokuconfig                img.png                    text.txt
     ...
 
     $ heroku create --stack cedar --buildpack https://github.com/abhishekmunie/heroku-buildpack-static.git
@@ -25,7 +25,7 @@ Example usage:
     -----> Discovering process types
     ...
 
-The buildpack will detect your app as Static if it has the file `_static.cfg` in the `root`.
+The buildpack will detect your app as Static if it has the file `herokuconfig` in the `root`.
 For nginx, you can set custom nginx config as described for [heroku-buildpack-nginx](https://github.com/abhishekmunie/heroku-buildpack-nginx).
 
 Configuring Buildpack
